@@ -2,6 +2,7 @@ const convertBtn = document.getElementById("convert-btn");
 const mainBtm = document.querySelector(".main-bottom");
 
 convertBtn.addEventListener("click", function () {
+  mainBtm.innerHTML = "";
   let inputVal = document.getElementById("input-val").value;
   convertLength(inputVal);
   convertVol(inputVal);
@@ -27,7 +28,9 @@ function convertVol(inputVal) {
 
   mainBtm.innerHTML += `<card class="cards">
   <h4>Length:(Meter/feet)</h4>
-  <p>${inputVal} liters = ${galCalc} galons | ${inputVal} galons = ${litCalc} liters</p></card>`;
+  <p>${inputVal} liters = ${galCalc.toFixed(
+    3
+  )} galons | ${inputVal} galons = ${litCalc.toFixed(3)} liters</p></card>`;
   console.log(litCalc);
 }
 
@@ -37,6 +40,8 @@ function convertWeigth(inputVal) {
 
   mainBtm.innerHTML += `<card class="cards">
   <h4>Length:(Meter/feet)</h4>
-  <p>${inputVal} kilos = ${poundCalc} pounds | ${inputVal} pound = ${kiloCalc} kilos</p></card>`;
+  <p>${inputVal} kilos = ${poundCalc.toFixed(
+    3
+  )} pounds | ${inputVal} pound = ${kiloCalc.toFixed(3)} kilos</p></card>`;
   console.log(kiloCalc);
 }
