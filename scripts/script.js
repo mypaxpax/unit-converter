@@ -18,7 +18,7 @@ function convertLength(inputVal) {
   let meterCalc = inputVal / 3.281;
 
   mainBtm.innerHTML += `<card class="cards">
-  <h4>Length:(Meter/feet)</h4>
+  <h4>Length: (Meter/feet)</h4>
   <p>${inputVal} meters = ${feetCalc.toFixed(
     3
   )} feet | ${inputVal} feet = ${meterCalc.toFixed(3)} meters</p></card>`;
@@ -29,18 +29,18 @@ function convertVol(inputVal) {
   let galCalc = inputVal * 0.264;
 
   mainBtm.innerHTML += `<card class="cards">
-  <h4>Length:(Meter/feet)</h4>
+  <h4>Volume: (Liters/Gallons)</h4>
   <p>${inputVal} liters = ${galCalc.toFixed(
     3
-  )} galons | ${inputVal} galons = ${litCalc.toFixed(3)} liters</p></card>`;
+  )} galons | ${inputVal} gallons = ${litCalc.toFixed(3)} liters</p></card>`;
 }
 
 function convertWeigth(inputVal) {
-  let kiloCalc = inputVal * 2.204;
-  let poundCalc = inputVal / 2.204;
+  let kiloCalc = inputVal / 2.204;
+  let poundCalc = inputVal * 2.204;
 
   mainBtm.innerHTML += `<card class="cards">
-  <h4>Length:(Meter/feet)</h4>
+  <h4>Mass: (Kilos/Pounds)</h4>
   <p>${inputVal} kilos = ${poundCalc.toFixed(
     3
   )} pounds | ${inputVal} pound = ${kiloCalc.toFixed(3)} kilos</p></card>`;
